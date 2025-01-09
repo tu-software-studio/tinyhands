@@ -408,6 +408,18 @@
    }
 },
 {
+   "model": "dataentry.form",
+   "fields": {
+      "form_type": 10,
+      "storage": "Lf",
+      "start_date": "2022-12-16T04:00:00Z",
+      "end_date": "2118-12-31T00:00:00Z",
+      "form_name": "lfCommon202409",
+      "version": "V2024.9",
+      "stations": []
+   }
+},
+{
    "model": "dataentry.category",
    "fields": {
       "form_tag": "lfTop",
@@ -464,6 +476,22 @@
    }
 },
 {
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "lfInformation202409",
+      "category_type": 2,
+      "description": "Information - LF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "lfMerged202409",
+      "category_type": 1,
+      "description": "Merged - LF"
+   }
+},
+{
    "model": "dataentry.formcategory",
    "fields": {
       "form": "lfNepal",
@@ -2689,6 +2717,83 @@
    "model": "dataentry.formcategory",
    "fields": {
       "form": "lfPhilippines",
+      "category": "lfCompliance",
+      "name": "Compliance",
+      "order": 7,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfTop",
+      "name": "Top",
+      "order": 1,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfInformation202409",
+      "name": "Information",
+      "order": 2,
+      "form_category_question_config": null,
+      "storage": "LfInformation"
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfEvaluation",
+      "name": "Evaluation",
+      "order": 4,
+      "form_category_question_config": null,
+      "storage": "LfEvaluation"
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfNarrative",
+      "name": "Narrative",
+      "order": 5,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfAttachment",
+      "name": "Attachments",
+      "order": 6,
+      "form_category_question_config": null,
+      "storage": "LfAttachment"
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
+      "category": "lfMerged202409",
+      "name": "Merged",
+      "order": 2,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "lfCommon202409",
       "category": "lfCompliance",
       "name": "Compliance",
       "order": 7,
@@ -3409,6 +3514,30 @@
    }
 },
 {
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "lfInformationSourceContactInfo",
+      "prompt": "Source Contact Info",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Source Contact Info",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "lfInformationRecruitmentAgencyName",
+      "prompt": "Recruitment Agency Name",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Recruitment Agency Name",
+      "export_params": null
+   }
+},
+{
    "model": "dataentry.questionlayout",
    "fields": {
       "question": "lfTopLfNumber",
@@ -3948,6 +4077,318 @@
    }
 },
 {
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationIncident",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationSourceType",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationSourceTitle",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationInterviewerName",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationInterviewDate",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationLocation",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationPlace",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationPlaceDetail",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationPlaceKind",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationAddress",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationLatitude",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationLongitude",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationPhone",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationSignboard",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationDescription",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvsVisited",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvsStayHowLong",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": {
+         "RadioItems": {
+            "lfAssociationPvsStayHowLong": [
+               "N/A (Not Applicable)"
+            ]
+         }
+      }
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvsStayStartDate",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvHide",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvHideExplain",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvFreeToGo",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationPvFreeToGoExplain",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfAssociationSuspects",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationSourceContactInfo",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfInformationRecruitmentAgencyName",
+      "category": "lfInformation202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedPlace",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedPlaceDetail",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedPlaceKind",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedAddress",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedLatitude",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedLongitude",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedPhone",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedSignboard",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "lfMergedDescription",
+      "category": "lfMerged202409",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
    "model": "dataentry.questionstorage",
    "fields": {
       "question": "lfTopLfNumber",
@@ -4358,6 +4799,20 @@
    "fields": {
       "question": "lfComplianceNotes",
       "field_name": "logbook_notes"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "lfInformationSourceContactInfo",
+      "field_name": "source_contact_info"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "lfInformationRecruitmentAgencyName",
+      "field_name": "recruitment_agency_name"
    }
 },
 {

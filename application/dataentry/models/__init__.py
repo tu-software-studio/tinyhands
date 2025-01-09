@@ -35,7 +35,7 @@ from .client_diagnostic import ClientDiagnostic
 from .empowerment import Empowerment
 from .gospel import Gospel
 from .incident import Incident
-from .suspect import Suspect, SuspectInformation, SuspectAssociation, SuspectEvaluation, SuspectLegal, SuspectAttachment
+from .suspect import Suspect, SuspectInformation, SuspectAssociation, SuspectEvaluation, SuspectLegal, SuspectLegalPv, SuspectAttachment
 from .location import LocationForm, LocationInformation, LocationAssociation, LocationEvaluation, LocationAttachment
 from .holiday import Holiday
 from .form_log import FormLog

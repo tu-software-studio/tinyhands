@@ -148,7 +148,6 @@ class SfFormViewSet(BaseFormViewSet):
     def get_associated_incidents(self, request, pk):
         sf = Suspect.objects.get(id=pk)
         associated_incidents = sf.associated_incidents.all();
-        print('get_associated', pk, len(associated_incidents))
         serializer = IncidentSerializer(associated_incidents, many=True, context={'request': request})
         return Response(serializer.data)
     

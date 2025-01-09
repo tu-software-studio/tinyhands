@@ -372,6 +372,18 @@
    }
 },
 {
+   "model": "dataentry.form",
+   "fields": {
+      "form_type": 9,
+      "storage": "VdfCommon2",
+      "start_date": "2024-12-04T04:00:00Z",
+      "end_date": "2118-12-31T00:00:00Z",
+      "form_name": "pvfCommon202408",
+      "version": "V2024.8",
+      "stations": []
+   }
+},
+{
    "model": "dataentry.category",
    "fields": {
       "form_tag": "pvfTop",
@@ -452,6 +464,54 @@
    }
 },
 {
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvfPvFamily202408",
+      "category_type": 1,
+      "description": "PV & Family Information - common PVF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvfRecruitment202408",
+      "category_type": 1,
+      "description": "Recruitment - common PVF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvfHomeAssessment202408",
+      "category_type": 1,
+      "description": "Home Situation Assessment - common PVF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvfAwareness202408",
+      "category_type": 1,
+      "description": "Awarenes - common PVF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvfRelease202408",
+      "category_type": 1,
+      "description": "Release Information - common PVF"
+   }
+},
+{
+   "model": "dataentry.category",
+   "fields": {
+      "form_tag": "pvPriorExploitation202408",
+      "category_type": 1,
+      "description": "Prior Exploitation - common PVF"
+   }
+},
+{
    "model": "dataentry.formcategory",
    "fields": {
       "form": "pvfNepal",
@@ -3634,6 +3694,116 @@
    "model": "dataentry.formcategory",
    "fields": {
       "form": "pvfPhilippines",
+      "category": "pvfCompliance",
+      "name": "Compliance",
+      "order": 10,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfTop",
+      "name": "Top",
+      "order": 1,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfPvFamily202408",
+      "name": "PV & Family",
+      "order": 2,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfRecruitment202408",
+      "name": "Recruitment",
+      "order": 4,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvPriorExploitation202408",
+      "name": "Travel/Exploitation",
+      "order": 3,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfHomeAssessment202408",
+      "name": "Home Situation Assessment",
+      "order": 5,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfAwareness202408",
+      "name": "Awareness",
+      "order": 6,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfRelease202408",
+      "name": "Release Information",
+      "order": 7,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfStaffAssessment",
+      "name": "Staff Assessment",
+      "order": 8,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
+      "category": "pvfAttachment",
+      "name": "Attachments",
+      "order": 9,
+      "form_category_question_config": null,
+      "storage": "VdfAttachmentCommon2"
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": "pvfCommon202408",
       "category": "pvfCompliance",
       "name": "Compliance",
       "order": 10,
@@ -5150,6 +5320,42 @@
    }
 },
 {
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "pvfAwarenessResourcesGiven",
+      "prompt": "What resources did staff give the PV?",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "What resources did staff give the PV?",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "pvHowVictimReleased",
+      "prompt": "How was the PV released?",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "How was the PV released?",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "pvfAwarenessResource",
+      "prompt": "Shared gospel resource",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Shared gospel resource",
+      "export_params": null
+   }
+},
+{
    "model": "dataentry.questionlayout",
    "fields": {
       "question": "pvfTopPvfNumber",
@@ -6270,6 +6476,1003 @@
    }
 },
 {
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfPvInfoPv",
+      "category": "pvfPvFamily202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfPvGuardianKnowDest",
+      "category": "pvfPvFamily202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaEconomic",
+      "category": "pvfPvFamily202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherYearsAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherDaysAgo",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherForYears",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherForDays",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherExplain",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitutionSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuseSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuseSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondageSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLaborSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOtherSuspects",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelProstitution",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelSexualAbuse",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelPhysicalAbuse",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelDebtBondage",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelForcedLabor",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelOther",
+      "category": "pvPriorExploitation202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentRecrutedNo",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentAgency",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentBroker",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentHowRecruited",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentTravelExpenses",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentPvCurrency",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentPvAmount",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentBrokerCurrency",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentBrokerAmount",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentDateLeftHome",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentJobPromised",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentPromisedCurrency",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentPromisedAmount",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentRecrutedAgency",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfRecruitmentRecrutedBroker",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianPressure",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianTryAgain",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaSaveAtHome",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaWantToGoHome",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaSexualAbuse",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaPhysicalAbuse",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaEmotiionalAbuse",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianAlchol",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianDrugs",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaPvSuicide",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaTotalAlarms",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": {
+         "TotalFlagId": "pvfHsaTotalAlarms"
+      }
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianSellingPv",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaGuardianSellingEvidence",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaWhySentHome",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfHsaContactNationalOffice",
+      "category": "pvfHomeAssessment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelHow",
+      "category": "pvfRecruitment202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessShareGospel",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessTract",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessOralPreaching",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessTestimony",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessBible",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessOther",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessPvAware",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessHeardMessage",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessWhatBelieveNow",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessWhyNotShare",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessFilm",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessPvTestimony",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessLocalChurch",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfTravelWouldBeTrafficked",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseDateLeave",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseHowReleased",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": {
+         "RadioItems": {
+            "1175": [
+               "Someone came to pick the PV up from the station/shelter",
+               "Staff arranged transportation for the PV to travel alone",
+               "Staff accompanied the PV during travel"
+            ]
+         }
+      }
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseEducationHt",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseLegalSupport",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseMedicalSupport",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseTravelSupport",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseFood",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseSfe",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseCountry",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": {
+         "RadioItems": {
+            "1182": [
+               "Monitoring Country"
+            ]
+         }
+      }
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseShortTermShelter",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseShelterNights",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseHours",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseVictimSent",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": {
+         "RadioItems": {
+            "1186": [
+               "Home to stay with guardians",
+               "Sent to stay with other relatives",
+               "Sent to Partner Organization",
+               "Social Welfare"
+            ]
+         }
+      }
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseOvernight",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfReleaseOtherLodging",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessResourcesGiven",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvHowVictimReleased",
+      "category": "pvfRelease202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "pvfAwarenessResource",
+      "category": "pvfAwareness202408",
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
    "model": "dataentry.questionstorage",
    "fields": {
       "question": "pvfTopPvfNumber",
@@ -7117,6 +8320,27 @@
    }
 },
 {
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "pvfAwarenessResourcesGiven",
+      "field_name": "share_gospel_give_pv"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "pvHowVictimReleased",
+      "field_name": "who_victim_released"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "pvfAwarenessResource",
+      "field_name": "share_gospel_resource"
+   }
+},
+{
    "model": "dataentry.formvalidation",
    "fields": {
       "form_tag": "pvfDateRecived",
@@ -7159,7 +8383,8 @@
          "pvfCambodia",
          "pvfUSA",
          "pvfOpenSource",
-         "pvfPhilippines"
+         "pvfPhilippines",
+         "pvfCommon202408"
       ]
    }
 },
