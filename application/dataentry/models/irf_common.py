@@ -68,6 +68,11 @@ class IrfCommon(BaseForm):
     vulnerability_doesnt_know_job_details = models.BooleanField("Doesn't know what job they are applying for", default=False)
     vulnerability_using_agent = models.BooleanField("Using an agent", default=False)
     vulnerability_mpa_excessive_time = models.BooleanField("MPA taking excessive time to process/send migrant", default=False)
+
+    vulnerability_unregistered_agent = models.BooleanField("Using an unregistered agent", default=False)
+    vulnerability_unregistered_agency = models.BooleanField("Using an unregistered recruitment agency", default=False)
+    vulnerability_contract_against_law = models.BooleanField("Elements of contract are against the law", default=False)
+
     
     agreement_contract_language = models.BooleanField("Contract not in a language understood by the PV", default=False)
     agreement_mpa_not_bearing_cost = models.BooleanField("Company/MPA not bearing cost to Gulf/Malaysia", default=False)

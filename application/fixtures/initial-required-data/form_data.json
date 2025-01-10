@@ -1502,6 +1502,19 @@
    }
 },
 {
+   "model": "dataentry.form",
+   "pk": 237,
+   "fields": {
+      "form_type": 1,
+      "storage": 181,
+      "start_date": "2018-04-01T00:00:00Z",
+      "end_date": "2118-12-31T00:00:00Z",
+      "form_name": "irfSfeKenya",
+      "version": "V2023.1",
+      "stations": []
+   }
+},
+{
    "model": "dataentry.category",
    "pk": 1,
    "fields": {
@@ -2588,6 +2601,15 @@
       "form_tag": "irfControlEthiopia",
       "category_type": 1,
       "description": "Control for IRF Ethiopia"
+   }
+},
+{
+   "model": "dataentry.category",
+   "pk": 408,
+   "fields": {
+      "form_tag": "irfSfeResourcesKenya",
+      "category_type": 1,
+      "description": "Resources for IRF SFE Kenya"
    }
 },
 {
@@ -15885,6 +15907,149 @@
    }
 },
 {
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 338,
+      "name": "Top Box",
+      "order": 1,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 339,
+      "name": "Area",
+      "order": 2,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 340,
+      "name": "Industry",
+      "order": 3,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 408,
+      "name": "Resources",
+      "order": 4,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 342,
+      "name": "Control",
+      "order": 5,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 343,
+      "name": "Narrative",
+      "order": 6,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 344,
+      "name": "People Main",
+      "order": 7,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 286,
+      "name": "People",
+      "order": 8,
+      "form_category_question_config": null,
+      "storage": 182
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 345,
+      "name": "Result",
+      "order": 9,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 58,
+      "name": "Attachments",
+      "order": 10,
+      "form_category_question_config": null,
+      "storage": 183
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 214,
+      "name": "Compliance",
+      "order": 11,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 232,
+      "name": "Verification",
+      "order": 12,
+      "form_category_question_config": null,
+      "storage": 204
+   }
+},
+{
+   "model": "dataentry.formcategory",
+   "fields": {
+      "form": 237,
+      "category": 233,
+      "name": "Verification Main",
+      "order": 13,
+      "form_category_question_config": null,
+      "storage": null
+   }
+},
+{
    "model": "dataentry.question",
    "pk": 1,
    "fields": {
@@ -23857,6 +24022,45 @@
       "answer_type": 4,
       "params": null,
       "export_name": "Agent suspect",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "pk": 2375,
+   "fields": {
+      "form_tag": "vulnerabilityUnregisteredAgent",
+      "prompt": "Using an unregistered agent",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Using an unregistered agent",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "pk": 2376,
+   "fields": {
+      "form_tag": "vulnerabilityUnregisteredAgency",
+      "prompt": "Using an unregistered recruitment agency",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Using an unregistered recruitment agency",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "pk": 2377,
+   "fields": {
+      "form_tag": "agreementContractElementsAgainstLaw",
+      "prompt": "Elements of contract are against the law",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Elements of contract are against the law",
       "export_params": null
    }
 },
@@ -42450,6 +42654,105 @@
    }
 },
 {
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 1807,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 974,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 1808,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 78,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 942,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 1810,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 1814,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 1817,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 2375,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 2376,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": 2377,
+      "category": 408,
+      "weight": 0,
+      "form_config": null
+   }
+},
+{
    "model": "dataentry.questionstorage",
    "fields": {
       "question": 1,
@@ -46542,6 +46845,27 @@
    "fields": {
       "question": 976,
       "field_name": "consent_to_use_information"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": 2375,
+      "field_name": "vulnerability_unregistered_agent"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": 2376,
+      "field_name": "vulnerability_unregistered_agency"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": 2377,
+      "field_name": "vulnerability_contract_against_law"
    }
 },
 {
@@ -51596,17 +51920,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 6,
-   "fields": {
-      "form_tag": "cifNepal",
-      "description": "Export Nepal CIF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 6
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 7,
    "fields": {
       "form_tag": "irfSouthAfrica",
@@ -51614,72 +51927,6 @@
       "implement_module": "export_import.irf_google_sheet",
       "implement_class_name": "IrfGoogleSheet",
       "form": 4
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 8,
-   "fields": {
-      "form_tag": "cifBangladesh",
-      "description": "cifBangladesh",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 14
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 9,
-   "fields": {
-      "form_tag": "cifIndia",
-      "description": "cifIndia",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 12
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 10,
-   "fields": {
-      "form_tag": "cifSouthAfrica",
-      "description": "cifSouthAfrica",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 16
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 11,
-   "fields": {
-      "form_tag": "vdfBangladesh",
-      "description": "vdfBangladesh",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 15
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 12,
-   "fields": {
-      "form_tag": "vdfIndia",
-      "description": "vdfIndia",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 13
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 13,
-   "fields": {
-      "form_tag": "vdfNepal",
-      "description": "vdfNepal",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 11
    }
 },
 {
@@ -51728,61 +51975,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 18,
-   "fields": {
-      "form_tag": "vdfBenin",
-      "description": "vdfBenin",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 21
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 19,
-   "fields": {
-      "form_tag": "cifBenin",
-      "description": "cifBenin",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 22
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 20,
-   "fields": {
-      "form_tag": "cifKenya",
-      "description": "cifKenya",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 23
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 21,
-   "fields": {
-      "form_tag": "cifMalawi",
-      "description": "cifMalawi",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 24
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 22,
-   "fields": {
-      "form_tag": "cifUganda",
-      "description": "cifUganda",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 25
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 23,
    "fields": {
       "form_tag": "irfTanzania",
@@ -51816,39 +52008,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 26,
-   "fields": {
-      "form_tag": "cifSierraLeone",
-      "description": "cifSierraLeone",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 29
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 27,
-   "fields": {
-      "form_tag": "cifGhana",
-      "description": "cifGhana",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 30
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 28,
-   "fields": {
-      "form_tag": "cifTanzania",
-      "description": "cifTanzania",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 31
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 29,
    "fields": {
       "form_tag": "irfIndiaNetwork",
@@ -51856,17 +52015,6 @@
       "implement_module": "export_import.irf_google_sheet",
       "implement_class_name": "IrfGoogleSheet",
       "form": 32
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 30,
-   "fields": {
-      "form_tag": "cifOsi",
-      "description": "cifOsi",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 33
    }
 },
 {
@@ -51893,17 +52041,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 33,
-   "fields": {
-      "form_tag": "vdfUganda",
-      "description": "vdfUganda",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 36
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 34,
    "fields": {
       "form_tag": "irfZimbabwi",
@@ -51911,72 +52048,6 @@
       "implement_module": "export_import.irf_google_sheet",
       "implement_class_name": "IrfGoogleSheet",
       "form": 37
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 35,
-   "fields": {
-      "form_tag": "cifZimbabwi",
-      "description": "Export Zimbabwi CIF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 38
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 36,
-   "fields": {
-      "form_tag": "vdfKenya",
-      "description": "vdfKenya",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 39
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 37,
-   "fields": {
-      "form_tag": "vdfMalawi",
-      "description": "vdfMalawi",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 40
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 38,
-   "fields": {
-      "form_tag": "vdfSouthAfrica",
-      "description": "vdfSouthAfrica",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 41
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 39,
-   "fields": {
-      "form_tag": "vdfTanzania",
-      "description": "vdfTanzania",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 42
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 40,
-   "fields": {
-      "form_tag": "vdfZimbabwe",
-      "description": "vdfZimbabwe",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 43
    }
 },
 {
@@ -52014,72 +52085,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 44,
-   "fields": {
-      "form_tag": "vdfRwanda",
-      "description": "Export Rwanda VDF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 47
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 45,
-   "fields": {
-      "form_tag": "vdfIndiaNetwork",
-      "description": "Export India Network VDF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 48
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 46,
-   "fields": {
-      "form_tag": "cifNamibia",
-      "description": "Export Namibia CIF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 49
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 47,
-   "fields": {
-      "form_tag": "cifIndiaNetwrk",
-      "description": "Export India Network CIF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 50
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 48,
-   "fields": {
-      "form_tag": "cifRwanda",
-      "description": "Export Rwanda CIF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 51
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 49,
-   "fields": {
-      "form_tag": "vdfGhana",
-      "description": "vdfGhana",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 53
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 50,
    "fields": {
       "form_tag": "irfUsa",
@@ -52102,17 +52107,6 @@
 },
 {
    "model": "dataentry.exportimport",
-   "pk": 52,
-   "fields": {
-      "form_tag": "vdfNamibia",
-      "description": "vdfNamibia",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 57
-   }
-},
-{
-   "model": "dataentry.exportimport",
    "pk": 53,
    "fields": {
       "form_tag": "irfLesotho",
@@ -52131,39 +52125,6 @@
       "implement_module": "export_import.irf_google_sheet",
       "implement_class_name": "IrfGoogleSheet",
       "form": 60
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 55,
-   "fields": {
-      "form_tag": "vdfMozambique",
-      "description": "Export Mozambique VDF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 61
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 56,
-   "fields": {
-      "form_tag": "vdfSierraLeone",
-      "description": "Export Sierra Leone VDF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 62
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 57,
-   "fields": {
-      "form_tag": "vdfLesotho",
-      "description": "Export Lesotho VDF",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 63
    }
 },
 {
@@ -52208,17 +52169,6 @@
       "implement_module": "export_import.irf_google_sheet",
       "implement_class_name": "IrfGoogleSheet",
       "form": 66
-   }
-},
-{
-   "model": "dataentry.exportimport",
-   "pk": 62,
-   "fields": {
-      "form_tag": "vdfZambia",
-      "description": "vdfZambia",
-      "implement_module": "export_import.export_form",
-      "implement_class_name": "ExportToGoogleSheet",
-      "form": 68
    }
 },
 {
@@ -52359,56 +52309,6 @@
 {
    "model": "dataentry.exportimportcard",
    "fields": {
-      "export_import": 6,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 6,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 6,
-      "category": 45,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 6,
-      "category": 46,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 6,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
       "export_import": 7,
       "category": 286,
       "prefix": "Victim ",
@@ -52424,156 +52324,6 @@
       "prefix": "Trafficker %d ",
       "max_instances": 5,
       "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 8,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 9,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 10,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 8,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 9,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 10,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 8,
-      "category": 94,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 9,
-      "category": 75,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 10,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 8,
-      "category": 95,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 9,
-      "category": 76,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 10,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 8,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 9,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 10,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
    }
 },
 {
@@ -52699,156 +52449,6 @@
 {
    "model": "dataentry.exportimportcard",
    "fields": {
-      "export_import": 26,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 26,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 26,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 26,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 26,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 27,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 27,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 27,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 27,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 27,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 28,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 28,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 28,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 28,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 28,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
       "export_import": 29,
       "category": 286,
       "prefix": "Victim ",
@@ -52864,256 +52464,6 @@
       "prefix": "Trafficker %d ",
       "max_instances": 5,
       "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 30,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 30,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 30,
-      "category": 166,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 30,
-      "category": 167,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 30,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 19,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 20,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 21,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 22,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 19,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 20,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 21,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 22,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 19,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 20,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 21,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 22,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 19,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 20,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 21,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 22,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 19,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 20,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 21,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 22,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
    }
 },
 {
@@ -53159,56 +52509,6 @@
 {
    "model": "dataentry.exportimportcard",
    "fields": {
-      "export_import": 35,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 35,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 35,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 35,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 35,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
       "export_import": 41,
       "category": 286,
       "prefix": "Victim ",
@@ -53244,156 +52544,6 @@
       "prefix": "Trafficker %d ",
       "max_instances": 5,
       "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 46,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 46,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 46,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 46,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 46,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 47,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 47,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 47,
-      "category": 75,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 47,
-      "category": 76,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 47,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 48,
-      "category": 40,
-      "prefix": "PV %d ",
-      "max_instances": 12,
-      "index_field_name": null
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 48,
-      "category": 43,
-      "prefix": "TB %d ",
-      "max_instances": 12,
-      "index_field_name": "transportation_order_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 48,
-      "category": 114,
-      "prefix": "PB %d ",
-      "max_instances": 6,
-      "index_field_name": "pb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 48,
-      "category": 115,
-      "prefix": "LB %d ",
-      "max_instances": 4,
-      "index_field_name": "lb_number"
-   }
-},
-{
-   "model": "dataentry.exportimportcard",
-   "fields": {
-      "export_import": 48,
-      "category": 47,
-      "prefix": "VB %d ",
-      "max_instances": 6,
-      "index_field_name": "vb_number"
    }
 },
 {
@@ -53735,30 +52885,6 @@
 {
    "model": "dataentry.exportimportfield",
    "fields": {
-      "export_import": 6,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 6,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
       "export_import": 7,
       "card": null,
       "field_name": "station",
@@ -53773,150 +52899,6 @@
    "model": "dataentry.exportimportfield",
    "fields": {
       "export_import": 7,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 8,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 8,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 9,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 9,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 10,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 10,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 11,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 11,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 12,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 12,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 13,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 13,
       "card": null,
       "field_name": "date_time_entered_into_system",
       "answer_type": 10,
@@ -54028,126 +53010,6 @@
       "field_name": "id",
       "answer_type": 2,
       "export_name": "id",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 18,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 18,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 19,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 19,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 20,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 20,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 21,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 21,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 22,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 22,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
       "arguments_json": null
    }
 },
@@ -54347,78 +53209,6 @@
 {
    "model": "dataentry.exportimportfield",
    "fields": {
-      "export_import": 26,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 26,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 27,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 27,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 28,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 28,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
       "export_import": 29,
       "card": null,
       "field_name": "station",
@@ -54448,30 +53238,6 @@
       "field_name": "status",
       "answer_type": 1,
       "export_name": "Status",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 30,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 30,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
       "arguments_json": null
    }
 },
@@ -54542,30 +53308,6 @@
       "field_name": "status",
       "answer_type": 1,
       "export_name": "Status",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 33,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 33,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
       "arguments_json": null
    }
 },
@@ -54583,150 +53325,6 @@
 {
    "model": "dataentry.exportimportfield",
    "fields": {
-      "export_import": 35,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 35,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 36,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 36,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 37,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 37,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 38,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 38,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 39,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 39,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 40,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 40,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
       "export_import": 41,
       "card": null,
       "field_name": "station",
@@ -54832,150 +53430,6 @@
 {
    "model": "dataentry.exportimportfield",
    "fields": {
-      "export_import": 44,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 44,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 45,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 45,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 46,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 46,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 47,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 47,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 48,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 48,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 49,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 49,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
       "export_import": 50,
       "card": null,
       "field_name": "station",
@@ -55046,30 +53500,6 @@
 {
    "model": "dataentry.exportimportfield",
    "fields": {
-      "export_import": 52,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 52,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
       "export_import": 53,
       "card": null,
       "field_name": "station",
@@ -55134,78 +53564,6 @@
       "field_name": "status",
       "answer_type": 1,
       "export_name": "Status",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 55,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 55,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 56,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 56,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
-      "arguments_json": null
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 57,
-      "card": null,
-      "field_name": "station",
-      "answer_type": 1,
-      "export_name": "Station",
-      "arguments_json": {
-         "part": "station_name"
-      }
-   }
-},
-{
-   "model": "dataentry.exportimportfield",
-   "fields": {
-      "export_import": 57,
-      "card": null,
-      "field_name": "date_time_entered_into_system",
-      "answer_type": 10,
-      "export_name": "Date/Time Entered into System",
       "arguments_json": null
    }
 },
@@ -55544,102 +53902,11 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 6,
-      "export_or_import": "export",
-      "spreadsheet_name": "Nepal CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 7,
       "export_or_import": "export",
       "spreadsheet_name": "South Africa IRF",
       "sheet_name": "IRF Export",
       "key_field_name": "IRF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 8,
-      "export_or_import": "export",
-      "spreadsheet_name": "Bangladesh CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 9,
-      "export_or_import": "export",
-      "spreadsheet_name": "India CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 10,
-      "export_or_import": "export",
-      "spreadsheet_name": "South Africa CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 11,
-      "export_or_import": "export",
-      "spreadsheet_name": "Bangladesh VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 12,
-      "export_or_import": "export",
-      "spreadsheet_name": "India VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 13,
-      "export_or_import": "export",
-      "spreadsheet_name": "Nepal VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
       "import_status_column": null,
       "import_issue_column": null,
       "suppress_column_warnings": true
@@ -55700,71 +53967,6 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 18,
-      "export_or_import": "export",
-      "spreadsheet_name": "Benin VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 19,
-      "export_or_import": "export",
-      "spreadsheet_name": "Benin CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 20,
-      "export_or_import": "export",
-      "spreadsheet_name": "Kenya CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 21,
-      "export_or_import": "export",
-      "spreadsheet_name": "Malawi CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 22,
-      "export_or_import": "export",
-      "spreadsheet_name": "Uganda CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 23,
       "export_or_import": "export",
       "spreadsheet_name": "Tanzania IRF",
@@ -55804,63 +54006,11 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 26,
-      "export_or_import": "export",
-      "spreadsheet_name": "Sierra Leone CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 27,
-      "export_or_import": "export",
-      "spreadsheet_name": "Ghana CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 28,
-      "export_or_import": "export",
-      "spreadsheet_name": "Tanzania CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 29,
       "export_or_import": "export",
       "spreadsheet_name": "India Network IRF",
       "sheet_name": "IRF Export",
       "key_field_name": "IRF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 30,
-      "export_or_import": "export",
-      "spreadsheet_name": "OSI CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
       "import_status_column": null,
       "import_issue_column": null,
       "suppress_column_warnings": true
@@ -55895,102 +54045,11 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 33,
-      "export_or_import": "export",
-      "spreadsheet_name": "Uganda VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 34,
       "export_or_import": "export",
       "spreadsheet_name": "Zimbabwe IRF",
       "sheet_name": "IRF Export",
       "key_field_name": "IRF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 35,
-      "export_or_import": "export",
-      "spreadsheet_name": "Zimbabwe CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 36,
-      "export_or_import": "export",
-      "spreadsheet_name": "Kenya VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 37,
-      "export_or_import": "export",
-      "spreadsheet_name": "Malawi VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 38,
-      "export_or_import": "export",
-      "spreadsheet_name": "South Africa VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 39,
-      "export_or_import": "export",
-      "spreadsheet_name": "Tanzania VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 40,
-      "export_or_import": "export",
-      "spreadsheet_name": "Zimbabwe VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
       "import_status_column": null,
       "import_issue_column": null,
       "suppress_column_warnings": true
@@ -56038,84 +54097,6 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 44,
-      "export_or_import": "export",
-      "spreadsheet_name": "Rwanda VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 45,
-      "export_or_import": "export",
-      "spreadsheet_name": "India Network VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 46,
-      "export_or_import": "export",
-      "spreadsheet_name": "Namibia CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 47,
-      "export_or_import": "export",
-      "spreadsheet_name": "India Network CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 48,
-      "export_or_import": "export",
-      "spreadsheet_name": "Rwanda CIF",
-      "sheet_name": "CIF Export",
-      "key_field_name": "CIF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 49,
-      "export_or_import": "export",
-      "spreadsheet_name": "Ghana VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 50,
       "export_or_import": "export",
       "spreadsheet_name": "USA IRF",
@@ -56142,19 +54123,6 @@
 {
    "model": "dataentry.googlesheetconfig",
    "fields": {
-      "export_import": 52,
-      "export_or_import": "export",
-      "spreadsheet_name": "Namibia VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
       "export_import": 53,
       "export_or_import": "export",
       "spreadsheet_name": "Lesotho IRF",
@@ -56173,45 +54141,6 @@
       "spreadsheet_name": "Mozambique IRF",
       "sheet_name": "IRF Export",
       "key_field_name": "IRF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 55,
-      "export_or_import": "export",
-      "spreadsheet_name": "Mozambique VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 56,
-      "export_or_import": "export",
-      "spreadsheet_name": "Sierra Leone VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 57,
-      "export_or_import": "export",
-      "spreadsheet_name": "Lesotho VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
       "import_status_column": null,
       "import_issue_column": null,
       "suppress_column_warnings": true
@@ -56251,19 +54180,6 @@
       "spreadsheet_name": "Zambia IRF",
       "sheet_name": "IRF Export",
       "key_field_name": "IRF Number",
-      "import_status_column": null,
-      "import_issue_column": null,
-      "suppress_column_warnings": true
-   }
-},
-{
-   "model": "dataentry.googlesheetconfig",
-   "fields": {
-      "export_import": 62,
-      "export_or_import": "export",
-      "spreadsheet_name": "Zambia VDF",
-      "sheet_name": "VDF Export",
-      "key_field_name": "VDF Number",
       "import_status_column": null,
       "import_issue_column": null,
       "suppress_column_warnings": true
