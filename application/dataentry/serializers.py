@@ -6,7 +6,7 @@ from django.db.models import Sum
 from django.core.exceptions import ObjectDoesNotExist
 
 from dataentry.models import Address1, Address2, Region, Country, SiteSettings, InterceptionRecord, VictimInterview, BorderStation, MasterPerson, Person
-from dataentry.models import Interceptee, InterceptionAlert, Permission, UserLocationPermission, Form, FormType, PersonAddress, PersonPhone, PersonSocialMedia, PersonDocument, PersonForm
+from dataentry.models import Interceptee, InterceptionAlert, Permission, PermissionGroup, UserLocationPermission, Form, FormType, PersonAddress, PersonPhone, PersonSocialMedia, PersonDocument, PersonForm
 from dataentry.models import AddressType, DocumentType, PhoneType, SocialMediaType, PersonIdentification
 from dataentry.models import StationStatistics, LocationStatistics, LocationStaff, CountryExchange
 from dataentry.models import PendingMatch, Audit, AuditSample, LegalCase, LegalCaseSuspect, LegalCaseVictim
@@ -654,7 +654,35 @@ class InterceptionAlertSerializer(serializers.ModelSerializer):
 class PermissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Permission
-        fields = ['id', 'permission_group', 'action', 'min_level', 'display_order']
+        fields = ['id', 'permission_group', 'action', 'min_level', 'display_order',
+                  'action_display_name', 'hide_action', 'group_display_name', 'hide_group']
+    
+    hide_action = serializers.SerializerMethodField(read_only=True)
+    group_display_name = serializers.SerializerMethodField(read_only=True)
+    hide_group = serializers.SerializerMethodField(read_only=True)
+    
+    def get_hide_action(self, obj):
+        if obj.display_order == -1 and obj.hide_action:
+            return True
+        return False
+    
+    def get_group_display_name(self, obj):
+        display_name = ''
+        try:
+            group = PermissionGroup.objects.get(permission_group=obj.permission_group)
+            display_name = group.group_display_name
+        except:
+           display_name = obj.permission_group
+        return display_name
+    
+    def get_hide_group(self, obj):
+        try:
+            group = PermissionGroup.objects.get(permission_group=obj.permission_group)
+            hide_group = group.hide_display
+        except:
+           hide_group = False
+           
+        return hide_group
         
 class UserLocationPermissionSerializer(serializers.ModelSerializer):
     class Meta:

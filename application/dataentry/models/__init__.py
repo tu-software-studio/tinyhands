@@ -14,7 +14,7 @@ from .master_person import MasterPerson, PersonAddress, PersonPhone, PersonSocia
 from .match_history import MatchAction, MatchHistory
 from .red_flags import RedFlags
 from .interception_alert import InterceptionAlert
-from .permission import Permission
+from .permission import Permission, PermissionGroup
 from .user_location_permission import UserLocationPermission
 from .form import *
 from .irf_common import IrfCommon, IntercepteeCommon, IrfAttachmentCommon, IrfVerification

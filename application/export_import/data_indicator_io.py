@@ -1,6 +1,9 @@
 import calendar
 import datetime
 
+from django.conf import settings
+
+from export_import.google_sheet import GoogleSheet
 from dataentry.models import Country, IndicatorHistory
 from dataentry.views.indicators import IndicatorsViewSet
 def get_data_collection_indicator_export_rows(year_months):
@@ -187,6 +190,11 @@ def get_data_collection_indicator_export_rows(year_months):
     
     return rows
 
+def export_entry_indicators (year_month):
+        spreadsheet = 'Data Indicators' + settings.SPREADSHEET_SUFFIX
+        sheet = GoogleSheet(spreadsheet,'Entry', 'year month', get_data_entry_indicator_export_rows)
+        sheet.update(str(year_month), str(year_month))
+
 def get_data_entry_indicator_export_rows(year_months):
     headers = [
         'year month',
@@ -220,7 +228,8 @@ def get_data_entry_indicator_export_rows(year_months):
         "Step 2: Verification Lag time",
         "Step 2: Verifications Completed",
         "Step 2: Verification Backlog",
-        "Step 2: Verification Victims"
+        "Step 2: Verification Victims",
+        "MDF Signed %"
     ]
     indicators = [
         "irfLag",
@@ -250,7 +259,8 @@ def get_data_entry_indicator_export_rows(year_months):
         "v2Lag",
         "v2Count",
         "v2Backlog",
-        "v2VictimCount"
+        "v2VictimCount",
+        "mdfSignedPercent"
         ]
     rows = []
     rows.append(headers)

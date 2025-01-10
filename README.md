@@ -69,12 +69,15 @@ The sanitized database has two accounts preconfigured for testing both of which 
 - `docker rm $(docker ps -a -q)` - remove all containers on machine
 - `docker exec -it <container-id> bash` - run an interactive shell inside the actual running container
 
-## Some useful :commands
+## Some useful :commands on server
 - export DREAMSUITE_TAG=`cat /home/thi/tinyhands/dreamsuite_tag`
 - sudo DREAMSUITE_TAG=$DREAMSUITE_TAG docker-compose run -d --rm web ./manage.py backupAttachmentsToCloud -d 2024-10-01
 - sudo DREAMSUITE_TAG=$DREAMSUITE_TAG docker-compose run --rm web bash
 - ./manage.py backupAttachmentsToCloud -d 2024-10-01 -p /data/media
 - docker exec -it web ./manage.py indicatorHistory --start 202405
+
+## Some useful :commands on local
+- python ./manage.py formLatest --settings dreamsuite.settings.local
 
 # local.env and common.env files
 

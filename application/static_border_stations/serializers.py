@@ -30,7 +30,10 @@ class StaffProjectSerializer(serializers.ModelSerializer):
         return obj.border_station.operating_country.id
     
     def get_project_category (self, obj):
-        return obj.border_station.project_category.name
+        if obj.border_station.project_category is None:
+            return None
+        else:
+            return obj.border_station.project_category.name
 
 class StaffReviewSerializer(serializers.ModelSerializer):
     class Meta:

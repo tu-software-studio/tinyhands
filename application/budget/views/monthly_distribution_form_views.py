@@ -10,7 +10,7 @@ from django.db.models import Value, IntegerField, Q
 from django.core.files.storage import default_storage
 from django.contrib.contenttypes.models import ContentType
 
-from dataentry.models import BorderStation, CountryExchange, IntercepteeCommon, StationStatistics, UserLocationPermission
+from dataentry.models import BorderStation, CountryExchange, IndicatorHistory, IntercepteeCommon, StationStatistics, UserLocationPermission
 from dataentry.serializers import CountrySerializer
 from budget.models import BorderStationBudgetCalculation, MonthlyDistributionForm, MdfCombined, MdfItem, ProjectRequest, ProjectRequestComment, ProjectRequestDiscussion
 from budget.serializers import MonthlyDistributionFormSerializer, MdfItemSerializer
@@ -653,6 +653,7 @@ class MonthlyDistributionFormViewSet(viewsets.ModelViewSet):
             mdf.signed_pbs = pbs_file
             print(pbs_file)
             mdf.save()
+            IndicatorHistory.update_and_export_indicators(mdf.border_station.operating_country, mdf.month_year.year, mdf.month_year.month)
             return Response(pbs_file)
         else:
             return Response('', status=status.HTTP_400_BAD_REQUEST)

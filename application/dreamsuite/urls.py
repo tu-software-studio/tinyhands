@@ -33,4 +33,4 @@ urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^interceptee_fuzzy_matching/', dataentry_views.interceptee_fuzzy_matching, name='interceptee_fuzzy_matching'),
     re_path(r'^get_station_id/', static_border_stations_views.get_station_id, name='get_station_id')
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.PUBLIC_URL, document_root=settings.PUBLIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.PUBLIC_URL, document_root=settings.PUBLIC_ROOT)

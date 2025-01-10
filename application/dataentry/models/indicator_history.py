@@ -12,6 +12,9 @@ from .country import Country
 from .holiday import Holiday
 
 from dataentry.models import BorderStation, Form, FormCategory, IntercepteeCommon, IrfCommon, IrfVerification
+from budget.models import MonthlyDistributionForm
+
+from pip._vendor.pyparsing import results
 
 class IndicatorHistory(models.Model):
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
@@ -140,6 +143,26 @@ class IndicatorHistory(models.Model):
         IndicatorHistory.add_result(results, 'v2Backlog', tie_backlog)
     
     @staticmethod
+    def mdf_signed_percent (results, start_date, end_date, country):
+        pbs_list = MonthlyDistributionForm.objects.filter(
+            border_station__operating_country=country,
+            month_year__gte=start_date,
+            month_year__lte=end_date)
+        total_count = 0
+        signed_count = 0
+        for pbs in pbs_list:
+            total_count += 1
+            if pbs.signed_pbs != '':
+                signed_count += 1
+        
+        if total_count > 0:
+            result = round(signed_count * 100 / total_count, 2)
+        else:
+            result = ''
+        
+        IndicatorHistory.add_result(results, 'mdfSignedPercent', result)
+    
+    @staticmethod
     def calculate_indicators(start_date, end_date, country, check_photos=None, include_latest_date = False):
         has_blind_verification = IrfCommon.has_blind_verification(country)
 
@@ -237,8 +260,28 @@ class IndicatorHistory(models.Model):
                 results['latestDate'] = ''
             else:
                 results['latestDate'] = str(latest_date)
+        
+        IndicatorHistory.mdf_signed_percent(results, start_date, end_date, country)
 
         return results
+    
+    @staticmethod
+    def update_and_export_indicators (country, year, month):
+        try:
+            entry = IndicatorHistory.objects.get(country=country, year=year, month=month) 
+        except:
+            return
+        
+        start_date = datetime.date(year, month, 1)
+        if month == 12:
+            end_date = datetime.date(year+1, 1, 1) - datetime.timedelta(1)
+        else:
+            end_date = datetime.date(year, month+1, 1) - datetime.timedelta(1)
+        results = IndicatorHistory.calculate_indicators(start_date, end_date, country)
+        entry.indicators = results
+        entry.save()
+        from export_import.data_indicator_io import export_entry_indicators
+        export_entry_indicators(year*100 + month) 
     
     @staticmethod
     def date_in_range (the_date, start_date, end_date):

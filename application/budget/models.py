@@ -390,6 +390,7 @@ class MonthlyDistributionForm(models.Model):
     past_sent_approved = models.CharField(max_length=127, blank=True)
     past_month_sent_reviewed = models.BooleanField(default=False)
     money_not_spent_reviewed = models.BooleanField(default=False)
+    notes = models.TextField('Notes', blank=True)
     
     requests = models.ManyToManyField(ProjectRequest)
     signed_pbs = models.FileField(upload_to='pbs_attachments', default='', blank=True)

@@ -241,19 +241,26 @@ class StaffRequestPermission(RequestPermission):
             
             staff_projects = obj.get_staff_projects()
             
-            found = False
-            # Staff has permission if one station has all of the required permissions
-            for staff_project in staff_projects:
-                station_id = staff_project.border_station.id
-                found = True
-                for permission in permissions_required:
-                    if not UserLocationPermission.has_session_permission(request, permission['permission_group'], permission['action'], country_id, station_id):
-                        self.message = self.message.format(permission)
-                        # station is missing at least one required permission
-                        found = False
-                        break
-                if found:
+            found = True
+            # Staff has permission if they have all the required permissions for the whole country
+            for permission in permissions_required:
+                if not UserLocationPermission.has_session_permission(request, permission['permission_group'], permission['action'], country_id, None):
+                    # country missing at least one required permission
+                    found = False
                     break
+            if not found:
+                # Staff has permission if they have all the required permissions for at least one station
+                for staff_project in staff_projects:
+                    station_id = staff_project.border_station.id
+                    found = True
+                    for permission in permissions_required:
+                        if not UserLocationPermission.has_session_permission(request, permission['permission_group'], permission['action'], country_id, station_id):
+                            self.message = self.message.format(permission)
+                            # station is missing at least one required permission
+                            found = False
+                            break
+                    if found:
+                        break
         
         return found
     

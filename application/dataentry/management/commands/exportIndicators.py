@@ -5,7 +5,7 @@ from django.conf import settings
 
 from export_import.google_sheet import GoogleSheet
 from dataentry.models import BorderStation, StationStatistics
-from export_import.data_indicator_io import get_data_collection_indicator_export_rows, get_data_entry_indicator_export_rows
+from export_import.data_indicator_io import get_data_collection_indicator_export_rows, export_entry_indicators
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
@@ -16,11 +16,6 @@ class Command(BaseCommand):
             type=str,
             help='Specify the year and month for processing. "202003" for March 2020',
         )
-    
-    def export_entry_indicators (self, year_month):
-        spreadsheet = 'Data Indicators' + settings.SPREADSHEET_SUFFIX
-        sheet = GoogleSheet(spreadsheet,'Entry', 'year month', get_data_entry_indicator_export_rows)
-        sheet.update(year_month, year_month)
     
     def export_collection_indicators(self, year_month):
         spreadsheet = 'Data Indicators' + settings.SPREADSHEET_SUFFIX
@@ -76,6 +71,6 @@ class Command(BaseCommand):
         if indicator_type == 'collection':    
             self.export_collection_indicators(year_month)
         elif indicator_type =='entry':
-            self.export_entry_indicators(year_month)
+            export_entry_indicators(year_month)
         else:
             print ('Unknown indicator type:', indicator_type)
