@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters as fs
 from rest_framework.response import Response
 from django.apps import apps
-from django.db.models import Value, IntegerField, Q
+from django.db.models import Value, IntegerField, F, Q
 from django.core.files.storage import default_storage
 from django.contrib.contenttypes.models import ContentType
 
@@ -86,24 +86,29 @@ def get_national_values(country, year, month):
         exchange = Decimal(1.0)
 
     total = 0
+    filter_date_time = datetime.datetime(year, month, 15, 0, 0, 0, 0, datetime.timezone.utc)
     for category in request_categories:
-        subtotal = ProjectRequest.objects.filter(
+        subtotal = Decimal(0)
+        requests = ProjectRequest.objects.filter(
             category=category,
             project__operating_country=country,
             monthlydistributionform__month_year__year=year,
-            monthlydistributionform__month_year__month=month).exclude(benefit_type_name='Deductions').aggregate(Sum('cost'))['cost__sum']
-        if subtotal is None:
-            subtotal = Decimal(0)
+            monthlydistributionform__month_year__month=month).exclude(benefit_type_name='Deductions')
+        for request in requests:
+            if not (request.status == 'Approved-Completed' and request.completed_date_time < filter_date_time):
+                subtotal += request.cost
+
         if category == constants.STAFF_BENEFITS:
             deductions = ProjectRequest.objects.filter(
                 category=category,
                 project__operating_country=country,
                 benefit_type_name='Deductions',
                 monthlydistributionform__month_year__year=year,
-                monthlydistributionform__month_year__month=month).aggregate(Sum('cost'))['cost__sum']
-            if deductions is None:
-                deductions = Decimal(0)
-            subtotal -= deductions
+                monthlydistributionform__month_year__month=month)
+            for deduction in deductions:
+                if not (deduction.status == 'Approved-Completed' and
+                        deduction.completed_date_time < filter_date_time):
+                    subtotal -= deduction.cost
             
         total += subtotal
         result[category] = {'local':subtotal, 'USD':round(subtotal/exchange,2)}
@@ -298,15 +303,18 @@ def get_mdf_project_values(mdf, project):
     
     total = Decimal(0)
     for category in request_categories:
-        subtotal = mdf.requests.filter(category=category, project=project).exclude(benefit_type_name='Deductions').aggregate(Sum('cost'))['cost__sum']
-        if subtotal is None:
-            subtotal = Decimal(0)
+        requests = mdf.requests.filter(category=category, project=project).exclude(benefit_type_name='Deductions')
+        subtotal = Decimal(0)
+        for request in requests:
+            if not (request.status == 'Approved-Completed' and request.completed_date_time < mdf.month_year):
+                subtotal += request.cost
+
         if category == constants.STAFF_BENEFITS:
-            deductions = mdf.requests.filter(category=category, project=project, benefit_type_name='Deductions').aggregate(Sum('cost'))['cost__sum']
-            if deductions is not None:
-                subtotal -= deductions
-        if subtotal is None:
-            subtotal = Decimal(0)
+            deductions = mdf.requests.filter(category=category, project=project, benefit_type_name='Deductions')
+            for request in deductions:
+                if not (request.status == 'Approved-Completed' and request.completed_date_time < mdf.month_year):
+                    subtotal -= request.cost
+
         results[category] = {'local': subtotal, 'USD': round(subtotal/exchange,2)}
         total += subtotal
     
@@ -361,7 +369,7 @@ def get_mdf_trend(mdf):
         
     for item in mdf.mdfitem_set.all():
         if item.work_project not in projects:
-            project.append(request.project)
+            projects.append(request.project)
     
     
     for project in projects:
