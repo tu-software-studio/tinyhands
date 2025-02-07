@@ -20,6 +20,7 @@ urlpatterns = [
     re_path(r'^api/', include('accounts.urls')),
     re_path(r'^api/', include('budget.urls')),
     re_path(r'^api/', include('events.urls')),
+    re_path(r'^api/', include('face_matching.urls')),
     re_path(r'^api/', include('rest_api.urls')),
     re_path(r'^api/', include('portal.urls')),
     re_path(r'^api/', include('static_border_stations.urls')),
