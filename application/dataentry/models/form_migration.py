@@ -265,6 +265,6 @@ class FormMigration:
             form_version.save()
         
         FormMigration.buildView('IRF')
-        FormMigration.buildView('CIF')
-        FormMigration.buildView('VDF')
+        #FormMigration.buildView('CIF')
+        #FormMigration.buildView('VDF')
         FormMigration.pending_match_view()

@@ -90,12 +90,6 @@ class IDManagementTest(APITestCase):
         form = Form.objects.get(form_name='irfIndia')
         form.stations.add(station)
         form.save()
-        form = Form.objects.get(form_name='cifIndia')
-        form.stations.add(station)
-        form.save()
-        form = Form.objects.get(form_name='vdfIndia')
-        form.stations.add(station)
-        form.save()
         
         url = reverse('IDManagementForms')
         data = {'person_id': self.person_list[0].id}
@@ -103,15 +97,13 @@ class IDManagementTest(APITestCase):
         response = self.client.get(url, data)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 3)
+        self.assertEqual(len(response.data), 1)
 
         cmpForm = []
         for idx in range(0, len(response.data)):
             cmpForm.append(response.data[idx]['number'])
 
         self.assertTrue(self.irf_list[0].irf_number in cmpForm, "missing irf")
-        self.assertTrue(self.cif_list[0].cif_number in cmpForm, "missing cif1")
-        self.assertTrue(self.cif_list[1].cif_number in cmpForm, "missing cif2")
 
     def test_add_alias(self):
         url = reverse('IDManagementAdd', args=[self.person_list[1].id, self.person_list[2].id])
