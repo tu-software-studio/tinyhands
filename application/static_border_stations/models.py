@@ -73,6 +73,7 @@ class Staff(Person):
     education = models.CharField(max_length=127, null=True)
     id_card_expiration = models.DateField(null=True)
     photo = models.ImageField(upload_to='staff_photos', default='', blank=True)
+    gender = models.CharField(max_length=127, null=True)
     
     #contract
     last_month_local = models.DecimalField(max_digits=17, decimal_places=2, default=0, blank=False)

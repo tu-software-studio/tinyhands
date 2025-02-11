@@ -332,13 +332,24 @@ class StaffViewSet(viewsets.ModelViewSet):
             file_obj = request.data['attachment_file']
             photo_file = self.save_file(file_obj, 'staff_photos/')
         
-        del request_json['photo'] 
+        del request_json['photo']
         serializer = StaffSerializer(data=request_json)
         serializer.is_valid(raise_exception=True)
         new_staff = serializer.save()
         if photo_file is not None:
             new_staff.photo.name = photo_file
             new_staff.save()
+        if 'miscellaneous' in request_json and len(request_json['miscellaneous']) > 0:
+            for entry in request_json['miscellaneous']:
+                entry['staff'] = new_staff.id;
+                if 'value' not in entry or entry['value'] is None:
+                    entry['value'] = ''
+                misc_serializer = StaffMiscellaneousSerializer(data=entry)
+                if misc_serializer.is_valid():
+                    misc_serializer.save()
+                else:
+                    return Response(misc_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
         serializer_new = StaffSerializer(new_staff, context={'request':request})
         return Response(serializer_new.data)
     
@@ -352,13 +363,31 @@ class StaffViewSet(viewsets.ModelViewSet):
             file_obj = request.data['attachment_file']
             photo_file = self.save_file(file_obj, 'staff_photos/')
         
-        del request_json['photo'] 
+        del request_json['photo']
         serializer = StaffSerializer(staff, data=request_json)
         serializer.is_valid(raise_exception=True)
         new_staff = serializer.save()
         if photo_file is not None:
             new_staff.photo.name = photo_file
             new_staff.save()
+
+        if 'miscellaneous' in request_json and len(request_json['miscellaneous']) > 0:
+            for entry in request_json['miscellaneous']:
+                entry['staff'] = new_staff.id;
+                if 'value' not in entry or entry['value'] is None:
+                    entry['value'] = ''
+                # Should be at most only one existing entry
+                existing_entries = StaffMiscellaneous.objects.filter(staff=new_staff, type=entry['type'])
+                if len(existing_entries) > 0:
+                    old = existing_entries[0]
+                    misc_serializer = StaffMiscellaneousSerializer(old, data=entry)
+                else:
+                    misc_serializer = StaffMiscellaneousSerializer(data=entry)
+                if misc_serializer.is_valid():
+                    misc_serializer.save()
+                else:
+                    return Response(misc_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
         serializer_new = StaffSerializer(new_staff, context={'request':request})
         return Response(serializer_new.data)
         
