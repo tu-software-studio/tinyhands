@@ -421,6 +421,8 @@ class MonthlyDistributionForm(models.Model):
         total = 0
         requests = self.requests.filter(project=project, category=constants.STAFF_BENEFITS, benefit_type_name='Deductions').exclude(cost__isnull=True)
         for request in requests:
+            if request.status == 'Approved-Completed' and request.completed_date_time < self.month_year:
+                continue
             total += request.cost
             
         return total
