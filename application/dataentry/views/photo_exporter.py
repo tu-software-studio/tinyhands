@@ -3,9 +3,11 @@ import zipfile
 from io import BytesIO
 from datetime import datetime
 from time import strptime, mktime
+from typing import List
 
 from braces.views import LoginRequiredMixin
-from django.db.models import Q
+from django.core.files.storage import default_storage
+from django.db.models import Q, QuerySet
 from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -56,7 +58,7 @@ class PhotoExporter(viewsets.GenericViewSet):
         
         return q_filter          
     
-    def get_photos(self, request, start_date, end_date):
+    def get_photos(self, request, start_date, end_date) -> QuerySet:
         start = timezone.make_aware(datetime.fromtimestamp(mktime(strptime(start_date, '%m-%d-%Y'))), timezone.get_default_timezone())
         end = timezone.make_aware(datetime.fromtimestamp(mktime(strptime(end_date, '%m-%d-%Y'))), timezone.get_default_timezone())
         
@@ -118,7 +120,7 @@ class PhotoExporter(viewsets.GenericViewSet):
             return Response({"count": self.get_photos(request, start_date, end_date).count()})
 
     def export_photos(self, request, start_date, end_date):
-        photos = list(self.get_photos(request, start_date, end_date))
+        photos: List = list(self.get_photos(request, start_date, end_date))
         if len(photos) == 0:
             return Response({'detail' : "No photos found in specified date range"}, status = status.HTTP_400_BAD_REQUEST)
 
@@ -128,11 +130,14 @@ class PhotoExporter(viewsets.GenericViewSet):
         f = BytesIO()
         imagezip = zipfile.ZipFile(f, 'w')
         for photoTuple in photos:
+            irf_number = photoTuple[1]
             try:
-                with open(settings.MEDIA_ROOT + '/' + photoTuple[0], "rb") as image_file:
-                    imagezip.writestr(str(photoTuple[2]) + '-' + str(photoTuple[1]) + '.jpg', image_file.read())
+                photo_url = photoTuple[0]
+                with default_storage.open(photo_url) as image_file:
+                    person_name = photoTuple[2]
+                    imagezip.writestr(str(person_name) + '-' + str(irf_number) + '.jpg', image_file.read())
             except:
-                logger.error('Could not find photo: ' + photoTuple[1] + '.jpg')
+                logger.error('Could not find photo: ' + irf_number + '.jpg')
         imagezip.close()
 
         response = HttpResponse(f.getvalue(), content_type="application/zip")

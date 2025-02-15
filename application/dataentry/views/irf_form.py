@@ -7,6 +7,7 @@ from time import strptime, mktime
 import zipfile
 from io import BytesIO
 
+from django.core.files.storage import default_storage
 from django.utils import timezone
 from django.db.models import Q
 from django.conf import settings
@@ -533,16 +534,24 @@ class IrfFormViewSet(BaseFormViewSet):
         f = BytesIO()
         imagezip = zipfile.ZipFile(f, 'w')
         for attachmentTuple in attachments:
+            attachment = attachmentTuple[0]
             try:
-                file_index = attachmentTuple[0].rfind('/')
-                if file_index == -1:
-                    zip_path = attachmentTuple[4] + '/' + attachmentTuple[3] + '/' + attachmentTuple[0]
+                option = attachmentTuple[1]
+                attachment_number = attachmentTuple[2]
+                irf_number = attachmentTuple[3]
+                country_name = attachmentTuple[4]
+
+                index_of_last_slash = attachment.rfind('/')
+                if index_of_last_slash == -1:
+                    # No slash at all, must be a simple non-nested file name
+                    zip_path = country_name + '/' + irf_number + '/' + attachment
                 else:
-                    zip_path = attachmentTuple[4] + '/' + attachmentTuple[3] + '/' + attachmentTuple[0][file_index+1:]
-                with open(settings.MEDIA_ROOT + '/' + attachmentTuple[0], "rb") as image_file:
-                    imagezip.writestr(zip_path, image_file.read())
+                    # Flatten all folders in-between? (or at least trim off trailing slash?)
+                    zip_path = country_name + '/' + irf_number + '/' + attachment[index_of_last_slash+1:]
+                with default_storage.open(attachment) as attachment_file:
+                    imagezip.writestr(zip_path, attachment_file.read())
             except:
-                logger.error('Could not find photo: ' + attachmentTuple[1] + '.jpg')
+                logger.error('Could not find attachment: ' + attachment + '.jpg')
         imagezip.close()
 
         response = HttpResponse(f.getvalue(), content_type="application/zip")
