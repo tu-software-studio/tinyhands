@@ -3,6 +3,7 @@ import sys
 
 from django.apps import apps
 from django.conf import settings
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.serializers.base import DeserializationError
 from django.core.serializers import base
 from django.core.serializers.python import _get_model
@@ -141,7 +142,10 @@ def PythonDeserializer(object_list, **options):
                         try:
                             foreign_object = cls.get_by_form_tag(field_value)
                         except Exception:
-                            foreign_object = cls.objects.get(form_tag=field_value)
+                            try:
+                                foreign_object = cls.objects.get(form_tag=field_value)
+                            except ObjectDoesNotExist:
+                                raise Exception(f"Could set model field '{field.attname}' with form tag '{field_value}', is your form_data_XXX.json correct?")
                         
                         field_value = foreign_object.id
     

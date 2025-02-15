@@ -30,9 +30,14 @@ class BorderStationFormViewSet(BaseFormViewSet):
     
     def get_form_type_name(self):
         return 'BORDER_STATION'
-    
+
     def get_element_paths(self):
-        return []
+        return [
+            {
+                'element': 'scanned',
+                'path': 'project_attachments/'
+            }
+        ]
     
     def get_list_field_names(self):
         return []

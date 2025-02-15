@@ -1,0 +1,1052 @@
+[
+  {
+    "model": "dataentry.storage",
+    "fields": {
+      "form_tag": "BorderStation",
+      "module_name": "dataentry.models.border_station",
+      "form_model_name": "BorderStation",
+      "response_model_name": null,
+      "parent_storage": null,
+      "foreign_key_field_parent": null,
+      "foreign_key_field_child": null
+    }
+  },
+  {
+    "model": "dataentry.storage",
+    "fields": {
+      "form_tag": "BorderStationAttachment",
+      "module_name": "dataentry.models.border_station",
+      "form_model_name": "BorderStationAttachment",
+      "response_model_name": null,
+      "parent_storage": "BorderStation",
+      "foreign_key_field_parent": "project",
+      "foreign_key_field_child": null
+    }
+  },
+  {
+    "model": "dataentry.storage",
+    "fields": {
+      "form_tag": "CommitteeMember",
+      "module_name": "static_border_stations.models",
+      "form_model_name": "CommitteeMember",
+      "response_model_name": null,
+      "parent_storage": "BorderStation",
+      "foreign_key_field_parent": "border_station",
+      "foreign_key_field_child": null
+    }
+  },
+  {
+    "model": "dataentry.storage",
+    "fields": {
+      "form_tag": "Staff",
+      "module_name": "static_border_stations.models",
+      "form_model_name": "Staff",
+      "response_model_name": null,
+      "parent_storage": "BorderStation",
+      "foreign_key_field_parent": "border_station",
+      "foreign_key_field_child": null
+    }
+  },
+  {
+    "model": "dataentry.storage",
+    "fields": {
+      "form_tag": "Location",
+      "module_name": "static_border_stations.models",
+      "form_model_name": "Location",
+      "response_model_name": null,
+      "parent_storage": "BorderStation",
+      "foreign_key_field_parent": "border_station",
+      "foreign_key_field_child": null
+    }
+  },
+  {
+    "model": "dataentry.form",
+    "fields": {
+      "form_type": 5,
+      "storage": "BorderStation",
+      "start_date": "2020-03-25T04:00:00Z",
+      "end_date": "2118-12-31T00:00:00Z",
+      "form_name": "borderStation",
+      "version": null,
+      "stations": []
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationDetail",
+      "category_type": 1,
+      "description": "Detail for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationCommittee",
+      "category_type": 2,
+      "description": "Committee Member for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationStaff",
+      "category_type": 2,
+      "description": "Staff for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationLocation",
+      "category_type": 2,
+      "description": "Location for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationForms",
+      "category_type": 1,
+      "description": "Forms for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.category",
+    "fields": {
+      "form_tag": "borderStationAttachment",
+      "category_type": 2,
+      "description": "Attachments for Border Station"
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationDetail",
+      "name": "Detail",
+      "order": 1,
+      "form_category_question_config": null,
+      "storage": null
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationCommittee",
+      "name": "Commitee Members",
+      "order": 2,
+      "form_category_question_config": null,
+      "storage": "CommitteeMember"
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationStaff",
+      "name": "Staff",
+      "order": 3,
+      "form_category_question_config": null,
+      "storage": "Staff"
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationLocation",
+      "name": "Location",
+      "order": 5,
+      "form_category_question_config": null,
+      "storage": "Location"
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationForms",
+      "name": "Forms",
+      "order": 6,
+      "form_category_question_config": null,
+      "storage": null
+    }
+  },
+  {
+    "model": "dataentry.formcategory",
+    "fields": {
+      "form": "borderStation",
+      "category": "borderStationAttachment",
+      "name": "Attachments",
+      "order": 4,
+      "form_category_question_config": null,
+      "storage": "BorderStationAttachment"
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "open",
+      "prompt": "Station Status",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Station Status",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "stationName",
+      "prompt": "Station Name",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Station Name",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "stationCode",
+      "prompt": "Station Code",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Station Code",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "dateEstablished",
+      "prompt": "Date Established",
+      "description": null,
+      "answer_type": 9,
+      "params": null,
+      "export_name": "Date Established",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "hasShelter",
+      "prompt": "Has Shelter",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Has Shelter",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "latitude",
+      "prompt": "Latitude",
+      "description": null,
+      "answer_type": 3,
+      "params": null,
+      "export_name": "Latitude",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "longitude",
+      "prompt": "Longitude",
+      "description": null,
+      "answer_type": 3,
+      "params": null,
+      "export_name": "Longitude",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "operatingCountryId",
+      "prompt": "Operating Country",
+      "description": null,
+      "answer_type": 2,
+      "params": null,
+      "export_name": "Operating Country",
+      "export_params": null
+    }
+  },
+  {
+    "model": "dataentry.question",
+    "fields": {
+      "form_tag": "timeZone",
+      "prompt": "Time Zone",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Time Zone",
+      "export_params": null
+    }
+  },
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "autoNumber",
+      "prompt": "Auto Number",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Auto Number",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "projectCategoryId",
+      "prompt": "Project Category",
+      "description": null,
+      "answer_type": 2,
+      "params": null,
+      "export_name": "Project Category",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "features",
+      "prompt": "Features",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Features",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "mdfProjectId",
+      "prompt": "MDF Project",
+      "description": null,
+      "answer_type": 2,
+      "params": null,
+      "export_name": "MDF Project",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "firstName",
+      "prompt": "First Name",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "First Name",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "lastName",
+      "prompt": "Last Name",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Last Name",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "email",
+      "prompt": "Email",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Email",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "phone",
+      "prompt": "Phone",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Phone",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "position",
+      "prompt": "Position",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Position",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "receivesMoneyDistributionForm",
+      "prompt": "Recieves Money Distribution Form",
+      "description": null,
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Recieves Money Distribution Form",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "firstDate",
+      "prompt": "First Date",
+      "description": null,
+      "answer_type": 9,
+      "params": null,
+      "export_name": "First Date",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "lastDate",
+      "prompt": "Last Date",
+      "description": null,
+      "answer_type": 9,
+      "params": null,
+      "export_name": "Last Date",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "name",
+      "prompt": "Name",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Name",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "locationType",
+      "prompt": "Location Type",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Location Type",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "active",
+      "prompt": "Active",
+      "description": "Location Active",
+      "answer_type": 6,
+      "params": null,
+      "export_name": "Active",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "formSet",
+      "prompt": "Form Set",
+      "description": null,
+      "answer_type": 15,
+      "params": {
+         "module_name": "dataentry.models.form",
+         "form_model_name": "Form"
+      },
+      "export_name": "Form Set",
+      "export_params": null
+   }
+},
+  {
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "borderStationAttachmentAttachment",
+      "prompt": "attachment",
+      "description": null,
+      "answer_type": 12,
+      "params": {
+         "subdirectory": "project_attachments/"
+      },
+      "export_name": "attachment",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "borderStationAttachmentNumber",
+      "prompt": "attachment number",
+      "description": null,
+      "answer_type": 2,
+      "params": null,
+      "export_name": "attachment number",
+      "export_params": null
+   }
+},
+{
+   "model": "dataentry.question",
+   "fields": {
+      "form_tag": "borderStationAttachmentOption",
+      "prompt": "Option",
+      "description": null,
+      "answer_type": 1,
+      "params": null,
+      "export_name": "Attachment Option",
+      "export_params": null
+   }
+},
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "open",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "stationName",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "stationCode",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "dateEstablished",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "hasShelter",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "latitude",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "longitude",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "operatingCountryId",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "timeZone",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "autoNumber",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "projectCategoryId",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "features",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+{
+   "model": "dataentry.questionlayout",
+   "fields": {
+      "question": "mdfProjectId",
+      "category": "borderStationDetail",
+      "weight": 0,
+      "form_config": null
+   }
+},
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "firstName",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "lastName",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "email",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "phone",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "position",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "receivesMoneyDistributionForm",
+      "category": "borderStationCommittee",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "firstName",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "lastName",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "email",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "phone",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "position",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "receivesMoneyDistributionForm",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "firstDate",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "lastDate",
+      "category": "borderStationStaff",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "name",
+      "category": "borderStationLocation",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "latitude",
+      "category": "borderStationLocation",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "longitude",
+      "category": "borderStationLocation",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "locationType",
+      "category": "borderStationLocation",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "active",
+      "category": "borderStationLocation",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "formSet",
+      "category": "borderStationForms",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "borderStationAttachmentAttachment",
+      "category": "borderStationAttachment",
+      "weight": 0,
+      "form_config": null
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "borderStationAttachmentNumber",
+      "category": "borderStationAttachment",
+      "weight": 0,
+      "form_config": {
+        "IndexQuestion": "borderStationAttachmentNumber"
+      }
+    }
+  },
+  {
+    "model": "dataentry.questionlayout",
+    "fields": {
+      "question": "borderStationAttachmentOption",
+      "category": "borderStationAttachment",
+      "weight": 0
+    }
+  },
+
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "open",
+      "field_name": "open"
+   }
+},
+
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "stationName",
+      "field_name": "station_name"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "stationCode",
+      "field_name": "station_code"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "dateEstablished",
+      "field_name": "date_established"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "hasShelter",
+      "field_name": "has_shelter"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "latitude",
+      "field_name": "latitude"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "longitude",
+      "field_name": "longitude"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "operatingCountryId",
+      "field_name": "operating_country_id"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "timeZone",
+      "field_name": "time_zone"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "autoNumber",
+      "field_name": "auto_number"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "projectCategoryId",
+      "field_name": "project_category_id"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "features",
+      "field_name": "features"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "mdfProjectId",
+      "field_name": "mdf_project_id"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "firstName",
+      "field_name": "first_name"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "lastName",
+      "field_name": "last_name"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "email",
+      "field_name": "email"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "phone",
+      "field_name": "phone"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "position",
+      "field_name": "position"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "receivesMoneyDistributionForm",
+      "field_name": "receives_money_distribution_form"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "firstDate",
+      "field_name": "first_date"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "lastDate",
+      "field_name": "last_date"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "name",
+      "field_name": "name"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "locationType",
+      "field_name": "location_type"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "active",
+      "field_name": "active"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "formSet",
+      "field_name": "form_set"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "borderStationAttachmentAttachment",
+      "field_name": "attachment"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "borderStationAttachmentNumber",
+      "field_name": "attachment_number"
+   }
+},
+{
+   "model": "dataentry.questionstorage",
+   "fields": {
+      "question": "borderStationAttachmentOption",
+      "field_name": "option"
+   }
+}
+]

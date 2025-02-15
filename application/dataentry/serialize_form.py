@@ -897,7 +897,10 @@ class QuestionResponseSerializer(serializers.Serializer):
         question_id = data.get('question_id')
         if question_id is None:
             question_tag = data.get('question_tag')
-            question = Question.objects.get(form_tag=question_tag)
+            try:
+                question = Question.objects.get(form_tag=question_tag)
+            except Question.DoesNotExist:
+                raise Exception(f"Could not find question with tag '{question_tag}', is formData.json right? Did you load it?")
         else:
             question = Question.objects.get(id=int(question_id))
         storage_id = data.get('storage_id')

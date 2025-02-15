@@ -142,6 +142,11 @@ class FormData:
     def load_cards(self, category, the_object):
         card_list = []
         category_form = self.category_form_dict[category.id]
+        if category_form.foreign_key_field_parent is None:
+            raise Exception(f"When loading cards for {category_form.category.form_tag} on {category_form.form_model.__name__},"
+                            f" could not find 'foreign_key_field_parent', is form.json right?\n"
+                            f"Check formcategory for the right storage and storage for the right foreign_key_field_parent\n"
+                            f"Then reload form data")
         
         cards = eval('category_form.form_model.objects.filter(' + category_form.foreign_key_field_parent + '__id=the_object.id)').order_by('id')
         for card in cards:

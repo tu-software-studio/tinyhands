@@ -7,9 +7,6 @@ from django.utils.timezone import make_aware
 
 from accounts.models import Account
 
-from .border_station import BorderStation
-from .country import Country
-
 #
 # Storage is used to describe the relationship between questions on a form
 # and the storage of that data in models.  For example, the VIF model contains
@@ -59,8 +56,10 @@ class Form(models.Model):
     end_date = models.DateTimeField(null=True)
     form_name = models.CharField(max_length=126, unique=True)
     version = models.CharField(max_length=126, null=True)
-    
-    stations = models.ManyToManyField(BorderStation)
+
+    # String to avoid circular import of BaseCard in border_station.py
+    # Needs app prefix because otherwise subclass for legal cases thinks its in the legal Django app
+    stations = models.ManyToManyField('dataentry.BorderStation')
     
     @property
     def form_tag(self):
@@ -556,7 +555,9 @@ class ExportImportField(models.Model):
 
 class BaseForm(models.Model):
     status = models.CharField('Status', max_length=20, default='pending')
-    station = models.ForeignKey(BorderStation, on_delete=models.CASCADE)
+    # String to avoid circular import of BaseCard in border_station.py
+    # Needs app prefix because otherwise subclass for legal cases thinks its in the legal Django app
+    station = models.ForeignKey('dataentry.BorderStation', on_delete=models.CASCADE)
     date_time_entered_into_system = models.DateTimeField(auto_now_add=True)
     date_time_last_updated = models.DateTimeField(auto_now=True)
     form_entered_by = models.ForeignKey(Account, related_name='%(class)s_entered_by', null=True, on_delete=models.SET_NULL)
