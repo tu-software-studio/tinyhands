@@ -24,7 +24,7 @@ Faker==19.13.0
 fuzzywuzzy==0.18.0
 gdata==2.0.18
 google-api-python-client==1.7.4
-gunicorn==21.2.0
+gunicorn==22.0.0
 httplib2==0.22.0
 ipdb==0.13.13
 lxml==4.9.3
